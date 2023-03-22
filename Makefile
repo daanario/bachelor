@@ -1,8 +1,8 @@
 OPENMP?=-fopenmp
 DEBUG?=-g
 CC?=gcc
-CDFLAGS?=Wextra -Wall -pedantic -std=c99 -fPIC
-LDFLAGS?=-lm
+CDFLAGS?=-Wextra -Wall -pedantic -std=c99 -fPIC
+LDFLAGS?=-lm 
 LIBFLAGS?=-shared
 
 all: game game.so
