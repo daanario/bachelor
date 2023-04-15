@@ -11,7 +11,7 @@ Link til bachelor møde - noter mm.:
 https://docs.google.com/document/d/1hbMO4Pj0ytmTZ8uR4CliwYQ-r6hG3K3lX3s7iI5WB74/edit
 
 ## TO DO (in priority):
-0. Ret 2 spiller implementationen sådan at q-funktionen trækker en pris for modstanderen ligesom vi gør i 3 spiller implementationen
+0. DONE Ret 2 spiller implementationen sådan at q-funktionen trækker en pris for modstanderen ligesom vi gør i 3 spiller implementationen
 
 1. Udbyg opgavestrukturen med f.eks. grafer, 2 og 3 spillere implementation,      complicity, anualiseret rate og begynd at skrive på opgaven. De to nedenstående grafer skal laves:
   1.1. Lav visualiersinger af graden af stationaritet, vha. varians fordeling
