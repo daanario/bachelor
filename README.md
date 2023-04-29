@@ -34,28 +34,28 @@ Contents
 2 Theory . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .0%/0.5side <br />
 2.1 Dynamic competition . . . . . . . . . . . . . . . . . . . . . . . . . . 0%/0.5side <br />
 2.1.1 Sequential games . . . . . . . . . . . . . . . . . . . . . . . . . . .0%/1side <br />
-2.1.1.1 Perioder. . . . . . . . . . . . . . . . . . . . . . . . . ... . . . 
-2.1.1.2 Timing. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-2.1.2 Bertrand two and n players . . . . . . . . . . . . . . . . ... . . .. 0%/1side
-2.1.3 Collusion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 0%/2sider
-2.2 Q-learning . . . . . . . ……. . . . . . . . . . . . . . . . . . . . . ...0%/0.5side
-2.2.1 Reinforcement learning and Q-learning introduction . .. . . . . . ..  80%/3sider
-2.2.2 Q-learning with more players . . . . . . . . . . . . . . . . . . . ...0%/1side
-2.2.3 Q-learning pricing algorithm Setup . . . . . . . . . . . . . . . . 0%/1side
-3 Results . . . . . . . ……. . . . . . . . . . . . . . . . . . . . . . . . ……….0%/0.5side
-3.1 Performance metrics . . . . . . . ……. . . . . . . . . . . . . . . .….0%/0.5side
-3.1.1 Complicity . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .……..0%/1side
-3.1.2 Profitability . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ………0%/1side
-3.2 Results . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . …..0%/2sider
-3.3 Grim trigger . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ….0%/1side
-4 Implementation and Optimization . . . . . . . ……. . . . . . .. .. . . . . .……….0%/0.5side
-4.1 Optimization. . . . . . . ……. . . . . . . . . . . . . . . . . . . . . . . ...0%/0.5side
-4.1.1 Numba speedup . . . . . . . . . . . . . . . . . . . . . . . . . . . …...0%/1side
-4.1.1.1 Scaling of running time and parrelization……………..
-4.1.2 Using C . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ……….0%/1side
-4.2 Implementation . . . . . . . ……. . . . . . . . . . . . . . . . . . . .….0%/0.5side
-4.2.1 Object oriented approach . . . . . . . . . . . . . . . . . . . . . . ..0%/1side 
-5 Discussion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ………...0%/1side
-6 Conclusion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ………..0%/1side
-7 Bibliography
-I alt 25 sider i alt.
+2.1.1.1 Perioder. . . . . . . . . . . . . . . . . . . . . . . . . ... . . . <br /> 
+2.1.1.2 Timing. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . <br />
+2.1.2 Bertrand two and n players . . . . . . . . . . . . . . . . ... . . .. 0%/1side <br />
+2.1.3 Collusion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 0%/2sider <br />
+2.2 Q-learning . . . . . . . ……. . . . . . . . . . . . . . . . . . . . . ...0%/0.5side <br />
+2.2.1 Reinforcement learning and Q-learning introduction . .. . . . . . ..  80%/3sider <br />
+2.2.2 Q-learning with more players . . . . . . . . . . . . . . . . . . . ...0%/1side <br />
+2.2.3 Q-learning pricing algorithm Setup . . . . . . . . . . . . . . . . 0%/1side <br />
+3 Results . . . . . . . ……. . . . . . . . . . . . . . . . . . . . . . . . ……….0%/0.5side <br />
+3.1 Performance metrics . . . . . . . ……. . . . . . . . . . . . . . . .….0%/0.5side <br />
+3.1.1 Complicity . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .……..0%/1side <br />
+3.1.2 Profitability . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ………0%/1side <br />
+3.2 Results . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . …..0%/2sider <br />
+3.3 Grim trigger . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ….0%/1side <br />
+4 Implementation and Optimization . . . . . . . ……. . . . . . .. .. . . . . .……….0%/0.5side <br />
+4.1 Optimization. . . . . . . ……. . . . . . . . . . . . . . . . . . . . . . . ...0%/0.5side <br />
+4.1.1 Numba speedup . . . . . . . . . . . . . . . . . . . . . . . . . . . …...0%/1side <br />
+4.1.1.1 Scaling of running time and parrelization…………….. <br />
+4.1.2 Using C . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ……….0%/1side <br />
+4.2 Implementation . . . . . . . ……. . . . . . . . . . . . . . . . . . . .….0%/0.5side <br />
+4.2.1 Object oriented approach . . . . . . . . . . . . . . . . . . . . . . ..0%/1side <br />
+5 Discussion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ………...0%/1side <br />
+6 Conclusion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ………..0%/1side <br />
+7 Bibliography <br />
+I alt 25 sider.
