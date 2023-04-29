@@ -29,11 +29,11 @@ https://docs.google.com/document/d/1hbMO4Pj0ytmTZ8uR4CliwYQ-r6hG3K3lX3s7iI5WB74/
 
 
 Contents
-0 Abstract….. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 0%/0.5side
-1 Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .0%/1.5side
-2 Theory . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .0%/0.5side
-2.1 Dynamic competition . . . . . . . . . . . . . . . . . . . . . . . . . . 0%/0.5side
-2.1.1 Sequential games . . . . . . . . . . . . . . . . . . . . . . . . . . .0%/1side
+0 Abstract….. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 0%/0.5side \\
+1 Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .0%/1.5side \\
+2 Theory . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .0%/0.5side \\
+2.1 Dynamic competition . . . . . . . . . . . . . . . . . . . . . . . . . . 0%/0.5side \\
+2.1.1 Sequential games . . . . . . . . . . . . . . . . . . . . . . . . . . .0%/1side \\
 2.1.1.1 Perioder. . . . . . . . . . . . . . . . . . . . . . . . . ... . . . 
 2.1.1.2 Timing. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 2.1.2 Bertrand two and n players . . . . . . . . . . . . . . . . ... . . .. 0%/1side
