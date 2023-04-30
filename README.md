@@ -11,6 +11,10 @@ Link til bachelor møde - noter mm.:
 https://docs.google.com/document/d/1hbMO4Pj0ytmTZ8uR4CliwYQ-r6hG3K3lX3s7iI5WB74/edit
 
 ## Status og spørgsmål:
+### Grim Trigger graf
+Det ses at Q-learneren hurtigt falder i hvor god den er til at hvor tit Q-learneren spiller en kooperativ mængde (kooperativ pris)
+### Discount rate
+Vi kan ikke finde nogen måde at udregne den optimale discount rate for flere spillere. Skal vi bare simulere en masse spil med forskellige discount rates og tage den discount rate som giver bedste complicity/profitability?
 ### Q-learner learning module og forventningen til modstanderens pris
 Jeg er usikker på om Q-funktionens learning module er implementeret korrekt. Lige nu "gætter" firm 0 på modstanderens pris ved at kalde set_price() og vice versa. Der står dog i Klein (2021), at den value-function condition (4), der skal holde for at være på ligevægtsstien, er parallel med Q-learning-algoritmens learning module (5). Under value-function condition (4), tager vi ikke modstanderens pris, $p_{j,t+1}$, direkte, men vi tager forventingen til den baseret på fordelingen af modstanderens reaktionsfunktion, $R_j(p)$. Dvs. vi tager $E_{p_{j,t+1}}$. Det vigtige her er, at vi ikke bare må gætte tilfældigt på en pris, men er nødt til at beregne en forventingsværdi på baggrund af en statistisk fordeling af en bestemt funktion $R_j(p)$, som jeg tror på en eller anden måde baserer sig på $Q_j(p)$. Jeg har derfor et par spørgsmål:
 
@@ -45,8 +49,6 @@ Calvano et. al. (2019) siger at en af de vigtigste måder at påvise collusion, 
 
 5. Implementer grim trigger (n periode) og
 
-
-
 Contents <br />
 0 Abstract….. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 0%/0.5side <br />
 1 Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .0%/1.5side <br />
@@ -60,18 +62,19 @@ Contents <br />
 2.2 Q-learning . . . . . . . ……. . . . . . . . . . . . . . . . . . . . . ...0%/0.5side <br />
 2.2.1 Reinforcement learning and Q-learning introduction . .. . . . . . ..  80%/3sider <br />
 2.2.2 Q-learning with more players . . . . . . . . . . . . . . . . . . . ...0%/1side <br />
-2.2.3 Q-learning pricing algorithm Setup . . . . . . . . . . . . . . . . 0%/1side <br />
-3 Results . . . . . . . ……. . . . . . . . . . . . . . . . . . . . . . . . ……….0%/0.5side <br />
-3.1 Performance metrics . . . . . . . ……. . . . . . . . . . . . . . . .….0%/0.5side <br />
-3.1.1 Complicity . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .……..0%/1side <br />
-3.1.2 Profitability . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ………0%/1side <br />
-3.2 Results . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . …..0%/2sider <br />
-3.3 Grim trigger . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ….0%/1side <br />
-4 Implementation and Optimization . . . . . . . ……. . . . . . .. .. . . . . .……….0%/0.5side <br />
-4.1 Optimization. . . . . . . ……. . . . . . . . . . . . . . . . . . . . . . . ...0%/0.5side <br />
-4.1.1 Numba speedup . . . . . . . . . . . . . . . . . . . . . . . . . . . …...0%/1side <br />
-4.1.1.1 Scaling of running time and parrelization…………….. <br />
-4.1.2 Using C . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ……….0%/1side <br />
+2.2.3 Q-learning pricing algorithm Setup . . . . . . . . . . . .... . . . . 0%/1side <br />
+3 Results . . . . . . . ……. . . . . . . . . . . . . . . . . . . . . . . ……….0%/0.5side <br />
+3.1 Performance metrics . . . . . . . ... . . . . . . . . . . . . .... . .….0%/0.5side <br />
+3.1.1 Complicity . . . . . . . . . . . . . . . . . . . . . . . . . . . .……..0%/1side <br />
+3.1.1.1 Plot af distribution of delta for 2 firms and 3 firms. . . . . .……..0%/1side <br />
+3.1.2 Profitability . . . . . . . . . . . . . . . . . . . . . .. . . . . ………0%/1side <br />
+3.2 Grim trigger . . . . . . . . .. . . . . . . . . . . . . . . . . . . . ….0%/1side <br />
+3.2.1 Grim trigger vs 2 player plot . . . . . . . . . . . . . . . . . . .  .0%/1side <br />
+4 Implementation and Optimization . . . . . . . ……. . . . . . .. .. .  .……….0%/0.5side <br />
+4.1 Optimization. . . . . . . ……. . . . . . . . . . . . . . . . . .. . . ...0%/0.5side <br />
+4.1.1 Numba speedup . . . . . . . . . . . . . . . . . . . . . . . . . . …...0%/1side <br />
+4.1.1.1 Scaling of running time and parrelization.......................... <br />
+4.1.2 Using C . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ……….0%/1side <br />
 4.2 Implementation . . . . . . . ……. . . . . . . . . . . . . . . . . . . .….0%/0.5side <br />
 4.2.1 Object oriented approach . . . . . . . . . . . . . . . . . . . . . . ..0%/1side <br />
 5 Discussion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ………...0%/1side <br />
