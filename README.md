@@ -27,7 +27,7 @@ Vi mangler at indføre målet for optimalitet, $\Gamma_i$. Dette er ret vigtigt,
 ## TO DO (in priority):
 0. DONE Ret 2 spiller implementationen sådan at q-funktionen trækker en pris for modstanderen ligesom vi gør i 3 spiller implementationen
 
-1. Udbyg opgavestrukturen med f.eks. grafer, 2 og 3 spillere implementation,      complicity, anualiseret rate og begynd at skrive på opgaven. De to nedenstående grafer skal laves:
+1. Udbyg opgavestrukturen med f.eks. grafer, 2 og 3 spillere implementation,      complicity, annualiseret discountrate: Find den optimale discountrate $\delta$. Og begynd at skrive på opgaven. De to nedenstående grafer skal laves:
   1.1. Lav visualiersinger af graden af stationaritet, vha. varians fordeling
 
   1.2. Lav en graf hvor x-aksen er er antallet af priser (undersøg om finheden af prisgrid ændrer resultater) og y aksen er hvor meget de colluder
