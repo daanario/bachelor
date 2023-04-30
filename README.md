@@ -12,11 +12,13 @@ https://docs.google.com/document/d/1hbMO4Pj0ytmTZ8uR4CliwYQ-r6hG3K3lX3s7iI5WB74/
 
 ## Status og spørgsmål:
 ### Q-learner learning module og forventningen til modstanderens pris
-Jeg er usikker på om Q-funktionens learning module er implementeret korrekt. Lige nu "gætter" firm 0 på modstanderens pris ved at kalde set_price() og vice versa. Der står dog i Klein (2021), at den value-function condition (4), der skal holde for at være på ligevægtsstien, er parallel med Q-learning-algoritmens learning module (5). Under value-function condition (4), tager vi ikke modstanderens pris, $p_{j,t+1}$, direkte, men vi tager forventingen til den baseret på fordelingen af modstanderens reaktionsfunktion, $R_j(p)$. Dvs. vi tager $E_{p_{j,t+1}}$. Det vigtige her er, at vi ikke bare må gætte tilfældigt på en pris, men er nødt til at beregne en forventingsværdi på baggrund af en statistisk fordeling af en bestemt funktion $R_j(p)$, som jeg tror på en eller anden måde baserer sig på $Q_j(p)$. Jeg har derfor 2 spørgsmål:
+Jeg er usikker på om Q-funktionens learning module er implementeret korrekt. Lige nu "gætter" firm 0 på modstanderens pris ved at kalde set_price() og vice versa. Der står dog i Klein (2021), at den value-function condition (4), der skal holde for at være på ligevægtsstien, er parallel med Q-learning-algoritmens learning module (5). Under value-function condition (4), tager vi ikke modstanderens pris, $p_{j,t+1}$, direkte, men vi tager forventingen til den baseret på fordelingen af modstanderens reaktionsfunktion, $R_j(p)$. Dvs. vi tager $E_{p_{j,t+1}}$. Det vigtige her er, at vi ikke bare må gætte tilfældigt på en pris, men er nødt til at beregne en forventingsværdi på baggrund af en statistisk fordeling af en bestemt funktion $R_j(p)$, som jeg tror på en eller anden måde baserer sig på $Q_j(p)$. Jeg har derfor et par spørgsmål:
 
 1. Hvordan skal ligheden mellem value-function condition (4) og det rekursive Q-learning forhold (5) forstås? Er andet led i sidste ligning i (5), $\delta \pi (p_{it}, s_{t+1})$ nødt til at tage forventingen, $E_{p_{j,t+1}}$, som argument, dvs. $s_{t+1}=E_{p_{j,t+1}}$?
 
 2. Såfremt dette er tilfældet, hvordan kan vi approksimere denne forventningsværdi? Tager vi gennemsnittet af prishistorikken? Der står eksplicit i Klein(2021) (side 553), at algoritmen under Markov-antagelsen ikke må betinge vores priser på historikken af tidligere priser, der ikke længere er relevante for den nuværende profit. 
+
+3. Hvad er fordelingen af reaktionsfunktionen $R_j(p)$? Kender vi den overhovedet?
 
 ### Undercutter
 Klein (2021) siger også i afsnittet om teoretiske begrænsninger (side 546), at Q-learnere er garanterede til at konvergere mod optimale strategier, hvis modstanderen spiller en fixed strategi, f.eks. undercutting. Hvis ikke vi får samme resultat, kan det være, vi har gjort noget galt. Vores Q-learner får totalt bank af undercutteren, hvilket er lidt pudsigt.
