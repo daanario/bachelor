@@ -16,7 +16,7 @@ Det ses at Q-learneren hurtigt falder i hvor god den er til at spille en koopera
 ### Discount rate
 Vi kan ikke finde nogen måde at udregne den optimale discount rate for flere spillere. Skal vi bare simulere en masse spil med forskellige discount rates og tage den discount rate som giver bedste complicity/profitability?
 ### Flere priser graf
-Når vi har flere priser i spil ses det hvordan Q_learneren hurtigt stopper med at spille kooperative mængder (kooperativ priser) når der kommer for mange priser
+Når vi har flere priser i spil ses det hvordan Q_learneren hurtigt stopper med at spille kooperative mængder (kooperativ priser) når der kommer for mange priser. Skal dette resultat med i opgaven evt. 
 ### Fordelingen af complicity i historgram graf
 Fordelingen af complicity ser stadig ret sjov ud, hvad kan mon dette betyder?
 ### Hvor stort et problem er numba fejlen
@@ -60,8 +60,8 @@ Contents <br />
 2 Theory . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .0%/0.5side <br />
 2.1 Dynamic competition . . . . . . . . . . . . . . . . . . . . . . . . . . 0%/0.5side <br />
 2.1.1 Sequential games . . . . . . . . . . . . . . . . . . . . . . . . . . .0%/1side <br />
-2.1.1.1 Perioder. . . . . . . . . . . . . . . . . . . . . . . . . ... . . . <br /> 
-2.1.1.2 Timing. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . <br />
+2.1.1.1 Perioder. . . . . . . . . . . . . . . . . . . . . . . . . ... . . . 0%/0.25side <br />
+2.1.1.2 Timing. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 0%/0.25side <br />
 2.1.2 Bertrand two and n players . . . . . . . . . . . . . . . . ... . . .. 0%/1side <br />
 2.1.3 Collusion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 0%/2sider <br />
 2.2 Q-learning . . . . . . . ……. . . . . . . . . . . . . . . . . . . . . ...0%/0.5side <br />
@@ -78,11 +78,9 @@ Contents <br />
 4 Implementation and Optimization . . . . . . . ……. . . . . . .. .. .  .……….0%/0.5side <br />
 4.1 Optimization. . . . . . . ……. . . . . . . . . . . . . . . . . .. . . ...0%/0.5side <br />
 4.1.1 Numba speedup . . . . . . . . . . . . . . . . . . . . . . . . . . …...0%/1side <br />
-4.1.1.1 Scaling of running time and parrelization.......................... <br />
-4.1.2 Using C . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ……….0%/1side <br />
-4.2 Implementation . . . . . . . ……. . . . . . . . . . . . . . . . . . . .….0%/0.5side <br />
-4.2.1 Object oriented approach . . . . . . . . . . . . . . . . . . . . . . ..0%/1side <br />
-5 Discussion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ………...0%/1side <br />
-6 Conclusion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ………..0%/1side <br />
+4.1.1.1 Scaling of running time and parrelization.......................... 0%/1side <br />
+4.2 Implementation . . . . . . . ……. . . . . . . . . . . . . . . . . . . .….0%/1side <br />
+5 Discussion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . …0%/1side <br />
+6 Conclusion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .……..0%/1side <br />
 7 Bibliography <br />
 I alt 25 sider.
