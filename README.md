@@ -56,30 +56,38 @@ Calvano et. al. (2019) siger at en af de vigtigste måder at påvise collusion, 
 
 Contents <br />
 0 Abstract….. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 0%/0.5side <br />
-1 Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .0%/1.5side <br />
-2 Theory . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .0%/0.5side <br />
-2.1 Dynamic competition . . . . . . . . . . . . . . . . . . . . . . . . . . 0%/0.5side <br />
-2.1.1 Sequential games . . . . . . . . . . . . . . . . . . . . . . . . . . .0%/1side <br />
+1 Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .20%/1.5side <br />
+2 Theory . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .85%/0.25side <br />
+2.1 Dynamic competition . . . . . . . . . . . . . . . . . . . . . . . . . . 40%/0.5side <br />
+2.1.1 Sequential games . . . . . . . . . . . . . . . . . . . . . . . . . . .40%/1side <br />
 2.1.1.1 Perioder. . . . . . . . . . . . . . . . . . . . . . . . . ... . . . 0%/0.25side <br />
 2.1.1.2 Timing. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 0%/0.25side <br />
-2.1.2 Bertrand two and n players . . . . . . . . . . . . . . . . ... . . .. 0%/1side <br />
+2.1.2 Bertrand two and n players . . . . . . . . . . . . . . . . ... . . .. 50%/1side <br />
+2.1.2.1 Monopolpris . . . . . . . . . . . . . . . . . . . . . . . ... . . .. 100%/1side <br />
 2.1.3 Collusion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 0%/2sider <br />
-2.2 Q-learning . . . . . . . ……. . . . . . . . . . . . . . . . . . . . . ...0%/0.5side <br />
-2.2.1 Reinforcement learning and Q-learning introduction . .. . . . . . ..  80%/3sider <br />
-2.2.2 Q-learning with more players . . . . . . . . . . . . . . . . . . . ...0%/1side <br />
+2.2 Q-learning . . . . . . . ……. . . . . . . . . . . . . . . . . . . . . ...0%/0.25side <br />
+2.2.1 Reinforcement learning and Q-learning introduction . .. . . . . . ..  80%/0.5sider <br />
+2.2.1.1 Discount rate . . . . . . . . . . . . . . . . . .  . .. . . . . . ..  0%/0.5sider <br />
+2.2.1.2 Learning module . . . . . . . . . . . . . . . . . .  . .. . . . . . ..  80%/1sider <br />
+2.2.1.3 Action module . . . . . . . . . . . . . . . . . .  . .. . . . . . ..  80%/1sider <br />
+2.2.2 Q-learning with more players . . . . . . . . . . . . . . . . . . . ...20%/1side <br />
 2.2.3 Q-learning pricing algorithm Setup . . . . . . . . . . . .... . . . . 0%/1side <br />
+2.2.1.1 Discount rate . . . . . . . . . . . . . . . . . .  . .. . . . . . ..  0%/0.5sider <br />
+2.3 Other players/strategies . . . . . . . . . . . . . . . . . .  . .. . .   0%/0.25sider <br />
+2.3.1 Trigger . . . . . . . . . . . . . . . . . . . . .  . .. . . . . . ..  65%/0.5sider <br />
+2.3.2 Tit for tat . . . . . . . . . . . . . . . . . .  . .. . . . . . ..  65%/0.5sider <br />
+2.3.3 Undercutter . . . . . . . . . . . . . . . . . .  . .. . . . . . ..  0%/0.5sider <br />
 3 Results . . . . . . . ……. . . . . . . . . . . . . . . . . . . . . . . ……….0%/0.5side <br />
-3.1 Performance metrics . . . . . . . ... . . . . . . . . . . . . .... . .….0%/0.5side <br />
-3.1.1 Complicity . . . . . . . . . . . . . . . . . . . . . . . . . . . .……..0%/1side <br />
-3.1.1.1 Plot af distribution of delta for 2 firms and 3 firms. . . . . .……..0%/1side <br />
-3.1.2 Profitability . . . . . . . . . . . . . . . . . . . . . .. . . . . ………0%/1side <br />
+3.1 Performance metrics . . . . . . . ... . . . . . . . . . . . . .... . .….0%/0.25side <br />
+3.1.1 Complicity . . . . . . . . . . . . . . . . . . . . . . . . . . . .……..15%/1side <br />
+3.1.1.1 Plot af distribution of delta for 2 firms and 3 firms. . . . . .……..30%/0.25side <br />
+3.1.2 Profitability . . . . . . . . . . . . . . . . . . . . . .. . . . . ………15%/1side <br />
 3.2 Grim trigger . . . . . . . . .. . . . . . . . . . . . . . . . . . . . ….0%/1side <br />
-3.2.1 Forgiving Grim trigger vs 2 player plot . . . . . . . . . . . . . .  .0%/1side <br />
+3.2.1 Forgiving Grim trigger vs 2 player plot . . . . . . . . . . . . . .  .75%/0side <br />
 4 Implementation and Optimization . . . . . . . ……. . . . . . .. .. .  .……….0%/0.5side <br />
 4.1 Optimization. . . . . . . ……. . . . . . . . . . . . . . . . . .. . . ...0%/0.5side <br />
 4.1.1 Numba speedup . . . . . . . . . . . . . . . . . . . . . . . . . . …...0%/1side <br />
-4.1.1.1 Scaling of running time and parrelization.......................... 0%/1side <br />
-4.2 Implementation . . . . . . . ……. . . . . . . . . . . . . . . . . . . .….0%/1side <br />
+4.2 Implementation python . . . . . . . ……. . . . . . . . . . . . . . . . . 0%/1side <br />
 5 Discussion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . …0%/1side <br />
 6 Conclusion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .……..0%/1side <br />
 7 Bibliography <br />
