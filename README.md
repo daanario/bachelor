@@ -29,6 +29,8 @@ Jeg er usikker på om Q-funktionens learning module er implementeret korrekt. Li
 
 3. Hvad er fordelingen af reaktionsfunktionen $R_j(p)$? Kender vi den overhovedet?
 
+4. I det generelle case hvor Q-learneren skal spille mod en vilkårlig agent (f.eks. en undercutter eller triggerstrategi), hvad skal Q-learneren så trække  sin næste state $s_{t+1}$ fra? Vi kan nok ikke bare indføre modstanderens strategi i Q-learnerens "gæt" direkte, da vi så ville afsløre strategien, og Q-learneren ikke selv lærer sin modstanders strategi. 
+
 ### Undercutter
 Klein (2021) siger også i afsnittet om teoretiske begrænsninger (side 546), at Q-learnere er garanterede til at konvergere mod optimale strategier, hvis modstanderen spiller en fixed strategi, f.eks. undercutting. Hvis ikke vi får samme resultat, kan det være, vi har gjort noget galt. Vores Q-learner får totalt bank af undercutteren, hvilket er lidt pudsigt. 
 
