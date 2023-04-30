@@ -26,6 +26,9 @@ Klein (2021) siger også i afsnittet om teoretiske begrænsninger (side 546), at
 ### Optimalitet
 Vi mangler at indføre målet for optimalitet, $\Gamma_i$. Dette er ret vigtigt, da det kan hjælpe os med at afgøre, om udfaldet er en Nash-ligevægt eller ej. Klein(2021) fandt, at $\Gamma_i \approx 1$. Det er ret vigtigt at kunne replikere dette resultat. At beregne optimaliteten kræver dog, at vi finder $max_p Q_{i}^{\*}(p, p_j)$, men algoritmen observerer ikke $Q_{i}^{\*}$. Den skal beregnes ved at loope over alle action-state par indtil ligning (5) konvergerer, men jeg er lidt i tvivl om, hvordan dette skal gøres. Hvordan ved vi, at (5) er konvergeret? Vi kan evt. sige at hvis differenserne er små nok, er den konvergeret. 
 
+### Forced deviation
+Calvano et. al. (2019) siger at en af de vigtigste måder at påvise collusion, er ved at se på hvad der sker i et scenarie af forced deviation. Hvis Q-learnerne "straffer" hinanden med priskrig efter et tvunget prisfald, for så derefter at arbejde sig op igen til samarbejde, har vi påvist, at de spiller en collusive strategi. Er denne centrale pointe fra Calvano et. al. (2019) vigtig nok til at vi også bør replikere den i vores opgave, for at være sikker på at Q-learnerne viser collusion? 
+
 ## TO DO (in priority):
 0. DONE Ret 2 spiller implementationen sådan at q-funktionen trækker en pris for modstanderen ligesom vi gør i 3 spiller implementationen
 
