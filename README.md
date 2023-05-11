@@ -49,6 +49,9 @@ Calvano et. al. (2019) siger at en af de vigtigste måder at påvise collusion, 
 6. Lav plot der viser profitability fra 0-100% for 2 og 3 player for bestemt prisgrid, se video hvor Anders tegner for at se hvordan plot skal se ud 
 7. Opdater opgavestruktur nederest
 
+## Questions Meeting 11/5
+1. Competitive benchmark 3 players 
+
 ## TO DO (in priority):
 0. DONE Ret 2 spiller implementationen sådan at q-funktionen trækker en pris for modstanderen ligesom vi gør i 3 spiller implementationen
 
