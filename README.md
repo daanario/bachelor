@@ -45,6 +45,8 @@ Calvano et. al. (2019) siger at en af de vigtigste måder at påvise collusion, 
 2. Kog numba problemet ned til Anders og send.
 3. Repliker flere priser grafen hvor vi har profitability istedet for intances of collusion på y aksen. 
 4. Skriv videre på opgaven
+5. tjek 3 player implementering igennem og se om den er korrekt
+6. Lav plot der viser profitability fra 0-100% for 2 og 3 player for bestemt prisgrid, se video hvor Anders tegner for at se hvordan plot skal se ud 
 
 
 ## TO DO (in priority):
