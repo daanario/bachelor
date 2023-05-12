@@ -83,32 +83,51 @@ Contents <br />
 2.1.1 Sequential games . . . . . . . . . . . . . . . . . . . . . . . . . . .40%/1side <br />
 2.1.1.1 Perioder. . . . . . . . . . . . . . . . . . . . . . . . . ... . . . 0%/0.25side <br />
 2.1.1.2 Timing. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 0%/0.25side <br />
-2.1.2 Bertrand two and n players . . . . . . . . . . . . . . . . ... . . .. 50%/1side <br />
-2.1.2.1 Monopolpris . . . . . . . . . . . . . . . . . . . . . . . ... . . .. 100%/1side <br />
-2.1.3 Collusion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 0%/2sider <br />
-2.2 Q-learning . . . . . . . ……. . . . . . . . . . . . . . . . . . . . . ...0%/0.25side <br />
-2.2.1 Reinforcement learning and Q-learning introduction . .. . . . . . ..  80%/0.5sider <br />
-2.2.1.1 Discount rate . . . . . . . . . . . . . . . . . .  . .. . . . . . ..  0%/0.5sider <br />
-2.2.1.2 Learning module . . . . . . . . . . . . . . . . . .  . .. . . . . . ..  80%/1sider <br />
-2.2.1.3 Action module . . . . . . . . . . . . . . . . . .  . .. . . . . . ..  80%/1sider <br />
-2.2.2 Q-learning with more players . . . . . . . . . . . . . . . . . . . ...20%/1side <br />
-2.2.3 Q-learning pricing algorithm Setup . . . . . . . . . . . .... . . . . 0%/1side <br />
-2.2.1.1 Discount rate . . . . . . . . . . . . . . . . . .  . .. . . . . . ..  0%/0.5sider <br />
-2.3 Other players/strategies . . . . . . . . . . . . . . . . . .  . .. . .   0%/0.25sider <br />
-2.3.1 Trigger . . . . . . . . . . . . . . . . . . . . .  . .. . . . . . ..  65%/0.5sider <br />
-2.3.2 Tit for tat . . . . . . . . . . . . . . . . . .  . .. . . . . . ..  65%/0.5sider <br />
-2.3.3 Undercutter . . . . . . . . . . . . . . . . . .  . .. . . . . . ..  0%/0.5sider <br />
-3 Results . . . . . . . ……. . . . . . . . . . . . . . . . . . . . . . . ……….0%/0.5side <br />
-3.1 Performance metrics . . . . . . . ... . . . . . . . . . . . . .... . .….0%/0.25side <br />
-3.1.1 Complicity . . . . . . . . . . . . . . . . . . . . . . . . . . . .……..15%/1side <br />
-3.1.1.1 Plot af distribution of delta for 2 firms and 3 firms. . . . . .……..30%/0.25side <br />
-3.1.2 Profitability . . . . . . . . . . . . . . . . . . . . . .. . . . . ………15%/1side <br />
-3.2 Grim trigger . . . . . . . . .. . . . . . . . . . . . . . . . . . . . ….0%/1side <br />
-3.2.1 Forgiving Grim trigger vs 2 player plot . . . . . . . . . . . . . .  .75%/0side <br />
-4 Implementation and Optimization . . . . . . . ……. . . . . . .. .. .  .……….0%/0.5side <br />
-4.1 Optimization. . . . . . . ……. . . . . . . . . . . . . . . . . .. . . ...0%/0.5side <br />
-4.1.1 Numba speedup . . . . . . . . . . . . . . . . . . . . . . . . . . …...0%/1side <br />
-4.2 Implementation python . . . . . . . ……. . . . . . . . . . . . . . . . . 0%/1side <br />
+2.1.2 Bertrand two and n players . . . . . . . . . . . . . . . . ... . . .. 30%/1side <br />
+2.1.2.1 Bertrand spilteori. . . . . . . . . . . . . . . . . . . . ... . . .. 0%/1side <br />
+2.1.2.2 Løsning af spillet, vis nashligevægte . . . . . . . . . . ... . . .. 0%/1side <br />
+2.1.2.3 Forklar hvordan spillet ændrer sig når der er flere spillere med. .. 0%/1side <br />
+2.1.2.4 Diskuter realisme ift. sequentielitet. . . . . . . .. . . . . . . .. 0%/1side <br />
+2.1.2.5 Monopolpris . . . . . . . . . . . . . . . . . . . . . . . ... . . .. 100%/1side <br />
+2.1.3 Collusion . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . 0%/2sider <br />
+2.1.3.1 Vis tacit collusion . . . .  . . . . . . . . . . . . . . . . . . . . 0%/2sider <br />
+2.1.3.2 lav analyse af Bertrand spillet med collusion. . . . . . . . . . . . 0%/2sider <br />
+2.1.3.2 Vis Nash-ligevægte og forklar collusion ud fra disse.. . . . . . . . 0%/2sider <br />
+2.2 Reinforcement learning .. .. . . . . . . . . . . . . . . . . . . . . ...0%/0.25side <br />
+2.2.1 Value-function condition problem . . . .. . . . . . . .. . . . . . ..  80%/0.5sider <br />
+2.2.2 Q-learning introduction . . . . . . . . . . . . . . .. . . . . . . .. . . . . . ..  80%/0.5sider <br />
+2.2.2.1 Parameters . . . . . . . . . . . . . . . . . .  . .. . . . . . ..  0%/0.5sider <br />
+2.2.2.1.1 Delta . . . . . . . . . . . . . . . . . .  . .. . . . . . ..  0%/0.5sider <br />
+2.2.2.1.2 Alpha . . . . . . . . . . . . . . . . . .  . .. . . . . . ..  0%/0.5sider <br />
+2.2.2.1.3 Theta . . . . . . . . . . . . . . . . . .  . .. . . . . . ..  0%/0.5sider <br />
+2.2.2.1.4 Epsilon . . . . . . . . . . . . . . . . . .  . .. . . . . . ..  0%/0.5sider <br />
+2.2.2.2 Learning module . . . . . . . . . . . . . . . . . .  . .. . . . . . ..  80%/1sider <br />
+2.2.2.3 Action module . . . . . . . . . . . . . . . . . .  . .. . . . . . ..  80%/1sider <br />
+2.2.3 Q-learning with more players . . . . . . . . . . . . . . . . . . . ...20%/1side <br />
+2.2.3.1 Dimensionality concerns . . . . . . . . . . . . . . . . . . . ...20%/1side <br />
+2.2.3.2 hvordan Q-learning learning module ændrer sig. . . . . . . . . . ...20%/1side <br />
+2.2.4 Q-learning pricing algorithm Setup . . . . . . . . . . . .... . . . . 0%/1side <br />
+2.2.4.1 Vis hele algoritmen som pseudokode for 2 og 3 spillere . ... . . . . 0%/1side <br />
+2.3 Trigger . . . . . . . . . . . . . . . . . . . . .  . .. . . . . . ..  65%/0.5sider <br />
+2.3.1 Introduction to trigger strategies. . . . . . . .  . .. . . . . . ..  65%/0.5sider <br />
+2.3.2 why we use it . . . . . . . . . . . . . . . . . .  . .. . . . . . ..  0%/0.5sider <br />
+2.3.3 math behind f table and pseodocode. . . . . .  . .. . . . . . ..  0%/0.5sider <br />
+2.4 Performance metrics . . . . . . . ... . . . . . . . . . . . . .... . .….0%/0.25side <br />
+2.4.1 Complicity . . . . . . . . . . . . . . . . . . . . . . . . . . . .……..15%/1side <br />
+2.4.2 Profitability . . . . . . . . . . . . . . . . . . . . . .. . . . . ………15%/1side <br />
+3 Implementation and Optimization . . . . . . . ……. . . . . . .. .. .  .……….0%/0.5side <br />
+3.1 Optimization. . . . . . . ……. . . . . . . . . . . . . . . . . .. . . ...0%/0.5side <br />
+3.1.1 Numba speedup . . . . . . . . . . . . . . . . . . . . . . . . . . …...0%/1side <br />
+3.2 Implementation python . . . . . . . ……. . . . . . . . . . . . . . . . . 0%/1side <br />
+3.3 Implementation python . . . . . . . ……. . . . . . . . . . . . . . . . . 0%/1side <br />
+4 Results . . . . . . . ……. . . . . . . . . . . . . . . . . . . . . . . ……….0%/0.5side <br />
+4.1 Performance . . . . . . . . . . .. . . . . . . ... . .. . .. . . . .……..30%/0.25side <br />
+4.1.1 Plot of complicity og profitability over time, 2 and 3 players. . .……..30%/0.25side <br />
+4.2 Price varians . . . . . . . . .. . . . . . . . . . . . . . . . . . . . ….0%/1side <br />
+4.2.1 Fortolk på variansen ændre det sig fra 2 til 3 spillere . . . . ….0%/1side <br />
+4.3 Trigger . . . . . . . . .. . . . . . . . . . . . . . . . . . . . ….0%/1side <br />
+4.3.1 Udpensle . . . . . . . . .. . . . . . . . . . . . . . . . . . . . ….0%/1side <br />
+4.2.1 Forgiving Grim trigger vs 2 player plot . . . . . . . . . . . . . .  .75%/0side <br />
 5 Discussion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . …0%/1side <br />
 6 Conclusion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .……..0%/1side <br />
 7 Bibliography <br />
