@@ -43,8 +43,10 @@ Calvano et. al. (2019) siger at en af de vigtigste måder at påvise collusion, 
 ## Questions Next meeting 
 1. Hvilken historie skal vi helt præcist fortælle med grim trigger når hovedpointen med opgaven er at vise hvad der sker ved flere spillere.
 2. Skal vi lave en "Implementation python" i python hvor vi skriver om pandas og hvordan vi har lavet koden i python. Vi skriver om numba.
+3. Er det Lower bound = 0når det competitive benchmark skal findes ud fra pris cykluser for 2,3 spillere?
+4. Når nash ligevægten skal findes for trigger strategien, kan dette så også gøres ud fra priscykluser (for at finde den competitive pris/ nashligevægten) eller skal stadie spillet løses
 
-## TO DO 11/5 (not in priority):
+## TO DO 12/5 (not in priority):
 1. Beregn Q-så man ved om learneren, plot differensen mellem Q matricen for periode k og k+1 osv. og plot denne forskel, for at sikre at vi er konvergeret. MødeOptagelse: [00:18:21-12/5]
 2. Vi skal afgøre hvilke af simulationerne der ender i fixed prices, og pris cyklus vha. variansplot over priser 2,3 spillere. Hvis der er n-point problems da overvej robuste varianser. MødeOptagelse: [01:07:21-12/5]
 3. Find find den pris som er nashligevægten da det er den troværdige og hårde pris [09:07:21-12/5]
