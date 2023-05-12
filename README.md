@@ -41,6 +41,13 @@ Vi mangler at indføre målet for optimalitet, $\Gamma_i$. Dette er ret vigtigt,
 Calvano et. al. (2019) siger at en af de vigtigste måder at påvise collusion, er ved at se på hvad der sker i et scenarie af forced deviation. Hvis Q-learnerne "straffer" hinanden med priskrig efter et tvunget prisfald, for så derefter at arbejde sig op igen til samarbejde, har vi påvist, at de spiller en collusive strategi. Er denne centrale pointe fra Calvano et. al. (2019) vigtig nok til at vi også bør replikere den i vores opgave, for at være sikker på at Q-learnerne viser collusion?
 
 ## TO DO 11/5 (not in priority):
+1. Beregn Q-så man ved om learneren, plot differensen mellem Q matricen for periode k og k+1 osv. og plot denne forskel, for at sikre at vi er konvergeret. MødeOptagelse: [00:18:21-12/5]
+2. Vi skal afgøre hvilke af simulationerne der ender i fixed prices, og pris cyklus vha. variansplot over priser 2,3 spillere. Hvis der er n-point problems da overvej robuste varianser. MødeOptagelse: [01:07:21-12/5]
+3. Find find den pris som er nashligevægten da det er den troværdige og hårde pris [09:07:21-12/5]
+4. Find det competitive benchmark for 3 spillere, kig på priscyklus, skriv overvejeler ned ift. ikke at løse analystisk da det ikke er tættere på virkeligheden, forklar mere i dybden omkring priscyklerne. CA. - [21:07:21-12/5]
+5. Hvis at der er forced deviation.
+
+## TO DO 11/5 (not in priority):
 1. Lav grim trigger om så den trækker rigtigt og lagre informationen i en matrice som Anders forklarede det. 
 2. Kog numba problemet ned til Anders og send.
 3. Repliker flere priser grafen hvor vi har profitability istedet for intances of collusion på y aksen. 
