@@ -40,6 +40,10 @@ Vi mangler at indføre målet for optimalitet, $\Gamma_i$. Dette er ret vigtigt,
 ### Forced deviation
 Calvano et. al. (2019) siger at en af de vigtigste måder at påvise collusion, er ved at se på hvad der sker i et scenarie af forced deviation. Hvis Q-learnerne "straffer" hinanden med priskrig efter et tvunget prisfald, for så derefter at arbejde sig op igen til samarbejde, har vi påvist, at de spiller en collusive strategi. Er denne centrale pointe fra Calvano et. al. (2019) vigtig nok til at vi også bør replikere den i vores opgave, for at være sikker på at Q-learnerne viser collusion?
 
+## Questions Next meeting 
+1. Hvilken historie skal vi helt præcist fortælle med grim trigger når hovedpointen med opgaven er at vise hvad der sker ved flere spillere.
+2. Skal vi lave en "Implementation python" i python hvor vi skriver om pandas og hvordan vi har lavet koden i python. Vi skriver om numba.
+
 ## TO DO 11/5 (not in priority):
 1. Beregn Q-så man ved om learneren, plot differensen mellem Q matricen for periode k og k+1 osv. og plot denne forskel, for at sikre at vi er konvergeret. MødeOptagelse: [00:18:21-12/5]
 2. Vi skal afgøre hvilke af simulationerne der ender i fixed prices, og pris cyklus vha. variansplot over priser 2,3 spillere. Hvis der er n-point problems da overvej robuste varianser. MødeOptagelse: [01:07:21-12/5]
@@ -77,22 +81,23 @@ Calvano et. al. (2019) siger at en af de vigtigste måder at påvise collusion, 
 
 Contents <br />
 0 Abstract….. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 0%/0.5side <br />
-1 Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .20%/1.5side <br />
-2 Theory . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .85%/0.25side <br />
+1 Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .0%/1.5side <br />
+2 Theory . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .65%/0.25side <br />
 2.1 Dynamic competition . . . . . . . . . . . . . . . . . . . . . . . . . . 40%/0.5side <br />
 2.1.1 Sequential games . . . . . . . . . . . . . . . . . . . . . . . . . . .40%/1side <br />
 2.1.1.1 Perioder. . . . . . . . . . . . . . . . . . . . . . . . . ... . . . 0%/0.25side <br />
 2.1.1.2 Timing. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 0%/0.25side <br />
-2.1.2 Bertrand two and n players . . . . . . . . . . . . . . . . ... . . .. 30%/1side <br />
-2.1.2.1 Bertrand spilteori. . . . . . . . . . . . . . . . . . . . ... . . .. 0%/1side <br />
-2.1.2.2 Løsning af spillet, vis nashligevægte . . . . . . . . . . ... . . .. 0%/1side <br />
-2.1.2.3 Forklar hvordan spillet ændrer sig når der er flere spillere med. .. 0%/1side <br />
-2.1.2.4 Diskuter realisme ift. sequentielitet. . . . . . . .. . . . . . . .. 0%/1side <br />
-2.1.2.5 Monopolpris . . . . . . . . . . . . . . . . . . . . . . . ... . . .. 100%/1side <br />
-2.1.3 Collusion . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . 0%/2sider <br />
-2.1.3.1 Vis tacit collusion . . . .  . . . . . . . . . . . . . . . . . . . . 0%/2sider <br />
-2.1.3.2 lav analyse af Bertrand spillet med collusion. . . . . . . . . . . . 0%/2sider <br />
-2.1.3.2 Vis Nash-ligevægte og forklar collusion ud fra disse.. . . . . . . . 0%/2sider <br />
+2.1.2 Nash equilibrium . . . . . . . . . . . . . . . . . . . . . ... . . .. 0%/1side <br />
+2.1.3 Bertrand two and n players . . . . . . . . . . . . . . . . ... . . .. 30%/1side <br />
+2.1.3.1 Bertrand spilteori. . . . . . . . . . . . . . . . . . . . ... . . .. 0%/1side <br />
+2.1.3.2 Løsning af spillet, vis nashligevægte . . . . . . . . . . ... . . .. 0%/1side <br />
+2.1.3.3 Forklar hvordan spillet ændrer sig når der er flere spillere med. .. 0%/1side <br />
+2.1.3.4 Diskuter realisme ift. sequentielitet. . . . . . . .. . . . . . . .. 0%/1side <br />
+2.1.3.5 Monopolpris . . . . . . . . . . . . . . . . . . . . . . . ... . . .. 100%/1side <br />
+2.1.4 Collusion . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . 0%/2sider <br />
+2.1.4.1 Vis tacit collusion . . . .  . . . . . . . . . . . . . . . . . . . . 0%/2sider <br />
+2.1.4.2 lav analyse af Bertrand spillet med collusion. . . . . . . . . . . . 0%/2sider <br />
+2.1.4.2 Vis Nash-ligevægte og forklar collusion ud fra disse.. . . . . . . . 0%/2sider <br />
 2.2 Reinforcement learning .. .. . . . . . . . . . . . . . . . . . . . . ...0%/0.25side <br />
 2.2.1 Value-function condition problem . . . .. . . . . . . .. . . . . . ..  80%/0.5sider <br />
 2.2.2 Q-learning introduction . . . . . . . . . . . . . . .. . . . . . . .. . . . . . ..  80%/0.5sider <br />
@@ -118,17 +123,28 @@ Contents <br />
 3 Implementation and Optimization . . . . . . . ……. . . . . . .. .. .  .……….0%/0.5side <br />
 3.1 Optimization. . . . . . . ……. . . . . . . . . . . . . . . . . .. . . ...0%/0.5side <br />
 3.1.1 Numba speedup . . . . . . . . . . . . . . . . . . . . . . . . . . …...0%/1side <br />
-3.2 Implementation python . . . . . . . ……. . . . . . . . . . . . . . . . . 0%/1side <br />
-3.3 Implementation python . . . . . . . ……. . . . . . . . . . . . . . . . . 0%/1side <br />
+3.2 Practical limitations . . . . . . . ……. . . . . . . . . . . . . . . . . 0%/1side <br />
 4 Results . . . . . . . ……. . . . . . . . . . . . . . . . . . . . . . . ……….0%/0.5side <br />
 4.1 Performance . . . . . . . . . . .. . . . . . . ... . .. . .. . . . .……..30%/0.25side <br />
 4.1.1 Plot of complicity og profitability over time, 2 and 3 players. . .……..30%/0.25side <br />
 4.2 Price varians . . . . . . . . .. . . . . . . . . . . . . . . . . . . . ….0%/1side <br />
 4.2.1 Fortolk på variansen ændre det sig fra 2 til 3 spillere . . . . ….0%/1side <br />
 4.3 Trigger . . . . . . . . .. . . . . . . . . . . . . . . . . . . . ….0%/1side <br />
-4.3.1 Udpensle . . . . . . . . .. . . . . . . . . . . . . . . . . . . . ….0%/1side <br />
-4.2.1 Forgiving Grim trigger vs 2 player plot . . . . . . . . . . . . . .  .75%/0side <br />
+4.3.1 Udpensle  . . . . . . . . .. . . . . . . . . . . . . . . . . . . . ….0%/1side <br />
+4.2.1 Forgiving trigger vs 2 player plot . . . . . . . . . . . . . .  .75%/0side <br />
+4.3 Trigger . . . . . . . . .. . . . . . . . . . . . . . . . . . . . ….0%/1side <br />
+4.4 Konvergens . . . . . . . . .. . . . . . . . . . . . . . . . . . . . ….0%/1side <br />
+4.5 Forced deviation . . . . . . . . .. . . . . . . . . . . . . . . . . . . . ….0%/1side <br />
 5 Discussion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . …0%/1side <br />
+5.1 introduktion/Opsummering af resultater. . . . . . . . . . .  . . . . . …0%/1side <br />
+5.2 Assumptions. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . …0%/1side <br />
+5.2.1 Kender bla. modstanders Q-matrice. . . . . . . . . . . . . . . . . . …0%/1side <br />
+5.2.2 Sequentielitet. . . . . . . . . . . . . . .  . . . .. . . . . .. . . …0%/1side <br />
+5.3 Further improvements. . . . . . . . . . . . . . . .. . . . . . . . . . …0%/1side <br />
+5.3.1 Recursiv, objectoriented implementation . . . . .. . . . . . . . . . …0%/1side <br /
+5.3.2 Økonomiske ændringer som efterspørgsel . .. . . .. . . . . . . . . . …0%/1side <br /
+5.4 Policy implications. . . . . . . . . . . . . . . .. . . . . . . . . . …0%/1side <br />
 6 Conclusion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .……..0%/1side <br />
+
 7 Bibliography <br />
-I alt 25 sider.
+
