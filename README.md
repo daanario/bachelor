@@ -25,7 +25,7 @@ https://docs.google.com/document/d/1hbMO4Pj0ytmTZ8uR4CliwYQ-r6hG3K3lX3s7iI5WB74/
 4. Find det competitive benchmark for 3 spillere, kig på priscyklus, skriv overvejeler ned ift. ikke at løse analystisk da det ikke er tættere på virkeligheden, forklar mere i dybden omkring priscyklerne. CA. - [21:07:21-12/5]
 5. Hvis at der er forced deviation.
 
-## TO DO 11/5 (not in priority):
+## TO DO 11/5 (not in priority) DONE:
 1. Lav grim trigger om så den trækker rigtigt og lagre informationen i en matrice som Anders forklarede det. 
 2. Kog numba problemet ned til Anders og send.
 3. Repliker flere priser grafen hvor vi har profitability istedet for intances of collusion på y aksen. 
@@ -37,7 +37,7 @@ https://docs.google.com/document/d/1hbMO4Pj0ytmTZ8uR4CliwYQ-r6hG3K3lX3s7iI5WB74/
 ## Questions Meeting 11/5
 1. Competitive benchmark 3 players 
 
-## TO DO (in priority):
+## TO DO (in priority) DONE:
 0. DONE Ret 2 spiller implementationen sådan at q-funktionen trækker en pris for modstanderen ligesom vi gør i 3 spiller implementationen
 
 1. Udbyg opgavestrukturen med f.eks. grafer, 2 og 3 spillere implementation,      complicity, annualiseret discountrate: Find den optimale discountrate $\delta$. Og begynd at skrive på opgaven. De to nedenstående grafer skal laves:
