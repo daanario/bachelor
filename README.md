@@ -32,6 +32,12 @@ https://docs.google.com/document/d/1hbMO4Pj0ytmTZ8uR4CliwYQ-r6hG3K3lX3s7iI5WB74/
 11. INDSÆT MÅSKE RANDOM BENCHMARK
 12. MÅSKE: HVIS AT DE ANDRE KONVERGERER TIL SAMME CYCLE (PERIODE)
 
+## TO DO 25/5 Christian
+1. Sæt convergence funktioner ind i 2 player og 3 player og plots -kaldene ind i main
+2. Sæt convergence plots ind
+3. Se om det giver mening at have cyclus længden med og om den virker
+4. Skriv til Anders om ikke vi skal dræbe trigger-strategien
+
 
 
 ## TO DO 12/5 (not in priority):
