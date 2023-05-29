@@ -21,14 +21,14 @@ https://docs.google.com/document/d/1hbMO4Pj0ytmTZ8uR4CliwYQ-r6hG3K3lX3s7iI5WB74/
 4. Når nash ligevægten skal findes for trigger strategien, kan dette så også gøres ud fra priscykluser (for at finde den competitive pris/ nashligevægten) eller skal stadie spillet løses
 ## TO DO 25/5 (not in priority):
 0. Læs teori igennem og tilføj
-1. Send teori afsted til Anders idag
-2. Ret subscripts i action value function og pseudokode, og beskriv eksplicit sekvensen.
-3. Hvis hvor meget prisen ændrer sig i priscyklerne. Det skal være absolut værdien af ændringen af priserne.
-4. Rapportere på periodiciteten ved at identificerer perioden.
+1. DONE Send teori afsted til Anders idag
+2. DONE Ret subscripts i action value function og pseudokode, og beskriv eksplicit sekvensen.
+3. LAGT PÅ HYLDEN Hvis hvor meget prisen ændrer sig i priscyklerne. Det skal være absolut værdien af ændringen af priserne.
+4. LAT PÅ HYLDEN  Rapportere på periodiciteten ved at identificerer perioden.
 5. Rapporter hvordan de fordeler tærten "profitten", når de cycler, vha. average three period profit. Mest af alt for tre spillere. Folk theorem siger at man godt kan understøtte assymetriske ligevægte, så der er ikke noget i vejen for at de opdeler profitten assymetrisk. 
 6. Hvis vi rapporter på 5. skriv noget teori om folk theorem
 7. RULLENDE GENNEMSNIT AF PROFITANDELE SOM MINIMUM DÆKKER EN PERIODE
-8. VED FORCED DEVIATION, HVIS OM DET BETALER SIG VED 2 SPILLERE
+8. DONE VED FORCED DEVIATION, HVIS OM DET BETALER SIG VED 2 SPILLERE
 9. Ændre convergence plot så de ikke kan blive negative
 10. INDSÆT "VI SPILLER BARE DET NEDERSTE GRIDPUNKT BENCHMARK"
 11. INDSÆT MÅSKE RANDOM BENCHMARK
