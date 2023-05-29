@@ -29,7 +29,7 @@ https://docs.google.com/document/d/1hbMO4Pj0ytmTZ8uR4CliwYQ-r6hG3K3lX3s7iI5WB74/
 6. Hvis vi rapporter på 5. skriv noget teori om folk theorem
 7. RULLENDE GENNEMSNIT AF PROFITANDELE SOM MINIMUM DÆKKER EN PERIODE
 8. DONE VED FORCED DEVIATION, HVIS OM DET BETALER SIG VED 2 SPILLERE
-9. Ændre convergence plot så de ikke kan blive negative
+9. DONE Ændre convergence plot så de ikke kan blive negative
 10. INDSÆT "VI SPILLER BARE DET NEDERSTE GRIDPUNKT BENCHMARK"
 11. INDSÆT MÅSKE RANDOM BENCHMARK
 12. MÅSKE: HVIS AT DE ANDRE KONVERGERER TIL SAMME CYCLE (PERIODE)
