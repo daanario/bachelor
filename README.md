@@ -19,6 +19,10 @@ https://docs.google.com/document/d/1hbMO4Pj0ytmTZ8uR4CliwYQ-r6hG3K3lX3s7iI5WB74/
 2. Skal vi lave en "Implementation python" i python hvor vi skriver om pandas og hvordan vi har lavet koden i python. Vi skriver om numba.
 3. Er det Lower bound = 0når det competitive benchmark skal findes ud fra pris cykluser for 2,3 spillere?
 4. Når nash ligevægten skal findes for trigger strategien, kan dette så også gøres ud fra priscykluser (for at finde den competitive pris/ nashligevægten) eller skal stadie spillet løses
+
+## TO DO 31/5 (Corrections from Anders on the text)
+0. Ret grim-trigger spillet til (tilføj reference og beskriv hvorfor vi gør det). 
+1. 
 ## TO DO 25/5 (not in priority):
 0. Læs teori igennem og tilføj
 1. DONE Send teori afsted til Anders idag
