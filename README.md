@@ -15,8 +15,9 @@ https://docs.google.com/document/d/1hbMO4Pj0ytmTZ8uR4CliwYQ-r6hG3K3lX3s7iI5WB74/
 
 ## TO DO 4/6
 0. Forced deviation 3 players. 
-1. DONE REMEMBER K=6 PLOT complicity
-2. remember new strategy outcome plots 
+1. Opdater profitability plots med de rigtige benchmarks
+2. DONE REMEMBER K=6 PLOT complicity
+3. remember new strategy outcome plots 
 
 ## Questions Last meeting 25/5
 1. Hvilken historie skal vi helt præcist fortælle med grim trigger når hovedpointen med opgaven er at vise hvad der sker ved flere spillere.
