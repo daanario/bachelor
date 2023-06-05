@@ -12,6 +12,12 @@ https://docs.google.com/document/d/1hbMO4Pj0ytmTZ8uR4CliwYQ-r6hG3K3lX3s7iI5WB74/
 
 ## Status og spørgsmål:
 ## Questions Next meeting 
+## TO DO 5/6
+0. Kør forced deviation(3 spillere) N = 1000, hvis interesant, kør N = 10.000
+1. Ret alle Complicty plot til "Average profit gain" for både 2 og 3 spillere
+2. 2. Kør alle average gain profit plots for k = 6 og k = 4
+3. Indsæt nye strategy outcome plots i overleaf
+4. Skriv konklusion
 
 ## TO DO 4/6
 0. Forced deviation 3 players. 
