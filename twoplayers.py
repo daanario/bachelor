@@ -124,7 +124,7 @@ def bertrand_simulation(alpha, delta, T, prices):
             curr_prof(p_table, profits, 1, t)
 
             #compute avg profitability of last 1000 runs
-            if t % 12500 == 0:
+            if t % 1000 == 0:
                 profitability = np.sum(profits[i, (t-1000):t])/1000
                 avg_profs1.append(profitability)
         else: # update firm 1
@@ -141,7 +141,7 @@ def bertrand_simulation(alpha, delta, T, prices):
             # write profits for firm 1
             curr_prof(p_table, profits, 0, t)
             curr_prof(p_table, profits, 1, t)
-            if t % 12500 == 1:    
+            if t % 1000 == 1:    
                 profitability = np.sum(profits[i, (t-1000):t])/1000
                 avg_profs2.append(profitability)
 

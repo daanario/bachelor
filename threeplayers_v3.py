@@ -8,7 +8,7 @@ from IPython.display import clear_output
 import matplotlib.ticker as ticker
 from matplotlib.ticker import FormatStrFormatter
 
-#@njit
+@njit
 def demand(p0t, p1t, p2t):
     if (p0t < p1t) and (p0t<p2t):
         return 1 - p0t
@@ -19,11 +19,11 @@ def demand(p0t, p1t, p2t):
     elif ((p0t < p1t) and (p0t == p2t)) or ((p0t == p1t) and (p0t < p2t)):
         return 1/2 * (1 - p0t)
     
-#@njit
+@njit
 def profit(p0t, p1t, p2t):
     return p0t * demand(p0t, p1t, p2t)
     
-#@njit
+@njit
 def set_price(i, t, p_table, Q_table, prices, epsilon):
     
     if epsilon >= np.random.uniform(0,1):
@@ -45,7 +45,7 @@ def set_price(i, t, p_table, Q_table, prices, epsilon):
         maxedQ_idx = np.argmax(Q_table[r_t_idx, s_t_idx, :]) # r_t_idx is the price set before i, s_t_idx is the last price of the firm that is setting the price next round
         return prices[maxedQ_idx]
 
-#@njit
+@njit
 def guess_s(i, t, p_table, Q_table, prices, epsilon):
     
     if epsilon >= np.random.uniform(0,1):
@@ -68,7 +68,7 @@ def guess_s(i, t, p_table, Q_table, prices, epsilon):
         return prices[maxedQ_idx]
 
 #This set_price function is extended with the extra parameter r_next which it needs in order to pull the correct price
-#@njit
+@njit
 def guess_r(i, t, p_table, Q_table, prices, epsilon, s_next):
     
     if epsilon >= np.random.uniform(0,1):
@@ -92,7 +92,7 @@ def guess_r(i, t, p_table, Q_table, prices, epsilon, s_next):
         return prices[maxedQ_idx]
     
 
-#@njit
+@njit
 def Q(p_it_idx, s_t_idx, r_t_idx, i, t, alpha, delta, p_table, Q_table, prices, r_next, s_next) -> float: # p_table contains p and s (opponent price)
     if i == 0:
         j = 1
@@ -120,7 +120,7 @@ def Q(p_it_idx, s_t_idx, r_t_idx, i, t, alpha, delta, p_table, Q_table, prices, 
 
     return (1 - alpha) * prev_est + alpha * new_est
 
-#@njit
+@njit
 def curr_prof(p_table, profits, i, t):
     if i == 0:
         j = 1
@@ -135,7 +135,7 @@ def curr_prof(p_table, profits, i, t):
     return
 
 
-#@njit
+@njit
 def bertrand_simulation(alpha, delta, T, prices):
 
     # array of possible prices firms can choose (in this case k=6)
@@ -261,7 +261,7 @@ def bertrand_simulation(alpha, delta, T, prices):
 
 
 
-#@njit
+@njit
 def undercut(price1, price2, prices):
     price = min(price1, price2)
     
@@ -271,7 +271,7 @@ def undercut(price1, price2, prices):
     else:
         return prices[0] # return lowest possible price
     
-#@njit
+@njit
 def bertrand_simulation_forced_deviation(alpha, delta, T, prices):
 
     # array of possible prices firms can choose (in this case k=6)
@@ -510,3 +510,103 @@ def bertrand_simulation_convergence(alpha, delta, T, prices):
         k = tmp
         t += 1
     return p_table, Q_norm_array0, Q_norm_array1, Q_norm_array2
+
+@njit
+def bertrand_simulation_theta(alpha, delta, T, theta, prices):
+    i = 0
+    j = 1
+    k = 2
+    t = 0
+
+    epsilon = (1 - theta)**t
+
+    p = len(prices)
+    Q_table0 = np.zeros((p, p, p)) # |P| x |S| matrix
+    Q_table1 = np.zeros((p, p, p)) 
+    Q_table2 = np.zeros((p, p, p)) 
+    p_table = np.empty((3, T))
+    p_table.fill(np.nan)
+    profits = np.zeros((3, T))
+
+    profitabilities0 = []
+    profitabilities1 = []
+    profitabilities2 = []
+    
+    p_table[i, :3] = np.random.choice(prices) # firm 0 sets price for periods t=0:2
+    p_table[j, :3] = np.random.choice(prices) # firm 1 sets price for periods t=0:2
+    p_table[k, :3] = np.random.choice(prices) # firm 2 sets price for periods t=0:2
+    
+    t = 3 # 3 periods have passed, so t = 3
+    while t < T:
+
+        if i == 0: # update firm 0
+            # learning module
+            p_it_idx = np.where(prices == p_table[i, t-3])[0][0]
+            s_t_idx =  np.where(prices == p_table[j, t-3])[0][0]
+            r_t_idx =  np.where(prices == p_table[k, t-3])[0][0]
+            s_next = guess_s(j, t, p_table, Q_table1, prices, epsilon)
+            r_next = guess_r(k, t, p_table, Q_table2, prices, epsilon, s_next)
+            Q_table0[r_t_idx, s_t_idx,p_it_idx] = Q(p_it_idx, s_t_idx,r_t_idx, i, t-3, alpha, delta, p_table, Q_table0, prices, r_next, s_next)
+
+            # action module
+            p_table[i, t] = set_price(i, t, p_table, Q_table0, prices, epsilon)
+            p_table[j, t] = p_table[j, t-1]
+            p_table[k, t] = p_table[k, t-1]
+            
+
+        if i ==1: # update firm 1
+            # learning module
+            p_it_idx = np.where(prices == p_table[i, t-3])[0][0]
+            s_t_idx =  np.where(prices == p_table[j, t-3])[0][0]
+            r_t_idx =  np.where(prices == p_table[k, t-3])[0][0]
+            
+            s_next = guess_s(j, t, p_table, Q_table2, prices, epsilon)
+            r_next = guess_r(k, t, p_table, Q_table0, prices, epsilon, s_next)
+            Q_table1[r_t_idx, s_t_idx,p_it_idx] = Q(p_it_idx, s_t_idx,r_t_idx, i, t-3, alpha, delta, p_table, Q_table1, prices, r_next, s_next)
+
+            # action module
+            p_table[i, t] = set_price(i, t, p_table, Q_table1, prices, epsilon)
+            p_table[j, t] = p_table[j, t-1]
+            p_table[k, t] = p_table[k, t-1]
+
+
+        if i ==2: # update firm 2
+            # learning module
+            p_it_idx = np.where(prices == p_table[i, t-3])[0][0]
+            s_t_idx =  np.where(prices == p_table[j, t-3])[0][0]
+            r_t_idx =  np.where(prices == p_table[k, t-3])[0][0]
+            s_next = guess_s(j, t, p_table, Q_table0, prices, epsilon)
+            r_next = guess_r(k, t, p_table, Q_table1, prices, epsilon, s_next)
+            Q_table2[r_t_idx, s_t_idx, p_it_idx] = Q(p_it_idx, s_t_idx,r_t_idx, i, t-3, alpha, delta, p_table, Q_table2, prices, r_next, s_next)
+            
+            # action module
+            p_table[i, t] = set_price(i, t, p_table, Q_table2, prices, epsilon)
+            p_table[j, t] = p_table[j, t-1]
+            p_table[k, t] = p_table[k, t-1]
+
+        
+        # write profits for firm 0, 1 and 2
+        curr_prof(p_table, profits, 0, t)
+        curr_prof(p_table, profits, 1, t)
+        curr_prof(p_table, profits, 2, t)
+        
+        if t % 1000 == 0:
+            # compute avg. of last 1000 profits for each firm
+            profitability0 = np.sum(profits[0, (t-1000):t])/1000 
+            profitability1 = np.sum(profits[1, (t-1000):t])/1000
+            profitability2 = np.sum(profits[2, (t-1000):t])/1000
+            
+            profitabilities0.append(profitability0)
+            profitabilities1.append(profitability1)
+            profitabilities2.append(profitability2)
+            
+        
+        # calculate new epsilon using decay parameter
+        epsilon = (1 - theta)**t
+        # Update variables
+        tmp = i
+        i = j
+        j = k
+        k = tmp
+        t += 1
+    return p_table, profitabilities0, profitabilities1, profitabilities2
