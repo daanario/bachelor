@@ -322,7 +322,7 @@ def bertrand_simulation_forced_deviation(alpha, delta, T, prices):
                 #print("firm k is:", k)
                 #print("pre-deviation prices: \n p_0t:", p_table[0, t], "\n p_1t:", p_table[1, t ], "\n p_2t:", p_table[2,t])
                
-                p_table[i, t] = undercut(p_table[j, t], p_table[k, t], prices)
+                p_table[i, t] = undercut(p_table[j, t-1], p_table[k, t-1], prices)
                 #print("deviation price: ", p_table[i, t])
 
         if i ==1: # update firm 1
