@@ -270,7 +270,7 @@ def undercut(price1, price2, prices):
         return prices[price_idx-1] # return price one index lower than opponent price
     else:
         return prices[0] # return lowest possible price
-    
+
 @njit
 def bertrand_simulation_forced_deviation(alpha, delta, T, prices):
 
@@ -284,9 +284,9 @@ def bertrand_simulation_forced_deviation(alpha, delta, T, prices):
     epsilon = (1 - theta)**t
 
     p = len(prices)
-    Q_table1 = np.zeros((p, p, p)) # |P| x |S| matrix
+    Q_table0 = np.zeros((p, p, p)) # |P| x |S| matrix
+    Q_table1 = np.zeros((p, p, p)) 
     Q_table2 = np.zeros((p, p, p)) 
-    Q_table3 = np.zeros((p, p, p)) 
     p_table = np.empty((3, T))
     p_table.fill(np.nan)
     profits = np.zeros((3, T))
@@ -307,12 +307,12 @@ def bertrand_simulation_forced_deviation(alpha, delta, T, prices):
             p_it_idx = np.where(prices == p_table[i, t-3])[0][0]
             s_t_idx =  np.where(prices == p_table[j, t-3])[0][0]
             r_t_idx =  np.where(prices == p_table[k, t-3])[0][0]
-            r_next = set_price(k, t, p_table, Q_table3, prices, epsilon)
-            s_next = set_price_ext(j, t, p_table, Q_table2, prices, epsilon, r_next)
-            Q_table1[r_t_idx, s_t_idx,p_it_idx] = Q(p_it_idx, s_t_idx,r_t_idx, i, t-3, alpha, delta, p_table, Q_table1, prices, r_next, s_next)
+            s_next = guess_s(j, t, p_table, Q_table1, prices, epsilon)
+            r_next = guess_r(k, t, p_table, Q_table2, prices, epsilon, s_next)
+            Q_table0[r_t_idx, s_t_idx,p_it_idx] = Q(p_it_idx, s_t_idx,r_t_idx, i, t-3, alpha, delta, p_table, Q_table0, prices, r_next, s_next)
 
             # action module
-            p_table[i, t] = set_price(i, t, p_table, Q_table1, prices, epsilon)
+            p_table[i, t] = set_price(i, t, p_table, Q_table0, prices, epsilon)
             p_table[j, t] = p_table[j, t-1]
             p_table[k, t] = p_table[k, t-1]
             
@@ -331,12 +331,12 @@ def bertrand_simulation_forced_deviation(alpha, delta, T, prices):
             s_t_idx =  np.where(prices == p_table[j, t-3])[0][0]
             r_t_idx =  np.where(prices == p_table[k, t-3])[0][0]
             
-            r_next = set_price(k, t, p_table, Q_table1, prices, epsilon)
-            s_next = set_price_ext(j, t, p_table, Q_table3, prices, epsilon, r_next)
-            Q_table2[r_t_idx, s_t_idx,p_it_idx] = Q(p_it_idx, s_t_idx,r_t_idx, i, t-3, alpha, delta, p_table, Q_table2, prices, r_next, s_next)
+            s_next = guess_s(j, t, p_table, Q_table2, prices, epsilon)
+            r_next = guess_r(k, t, p_table, Q_table0, prices, epsilon, s_next)
+            Q_table1[r_t_idx, s_t_idx,p_it_idx] = Q(p_it_idx, s_t_idx,r_t_idx, i, t-3, alpha, delta, p_table, Q_table1, prices, r_next, s_next)
 
             # action module
-            p_table[i, t] = set_price(i, t, p_table, Q_table2, prices, epsilon)
+            p_table[i, t] = set_price(i, t, p_table, Q_table1, prices, epsilon)
             p_table[j, t] = p_table[j, t-1]
             p_table[k, t] = p_table[k, t-1]
 
@@ -346,14 +346,15 @@ def bertrand_simulation_forced_deviation(alpha, delta, T, prices):
             p_it_idx = np.where(prices == p_table[i, t-3])[0][0]
             s_t_idx =  np.where(prices == p_table[j, t-3])[0][0]
             r_t_idx =  np.where(prices == p_table[k, t-3])[0][0]
-            r_next = set_price(k, t, p_table, Q_table2, prices, epsilon)
-            s_next = set_price_ext(j, t, p_table, Q_table1, prices, epsilon, r_next)
-            Q_table3[r_t_idx, s_t_idx, p_it_idx] = Q(p_it_idx, s_t_idx,r_t_idx, i, t-3, alpha, delta, p_table, Q_table3, prices, r_next, s_next)
+            s_next = guess_s(j, t, p_table, Q_table0, prices, epsilon)
+            r_next = guess_r(k, t, p_table, Q_table1, prices, epsilon, s_next)
+            Q_table2[r_t_idx, s_t_idx, p_it_idx] = Q(p_it_idx, s_t_idx,r_t_idx, i, t-3, alpha, delta, p_table, Q_table2, prices, r_next, s_next)
             
             # action module
-            p_table[i, t] = set_price(i, t, p_table, Q_table3, prices, epsilon)
+            p_table[i, t] = set_price(i, t, p_table, Q_table2, prices, epsilon)
             p_table[j, t] = p_table[j, t-1]
             p_table[k, t] = p_table[k, t-1]
+
         
         # write profits for firm 0, 1 and 2
         curr_prof(p_table, profits, 0, t)
@@ -380,6 +381,8 @@ def bertrand_simulation_forced_deviation(alpha, delta, T, prices):
         k = tmp
         t += 1
     return p_table, profitabilities0, profitabilities1, profitabilities2
+
+
 #@njit. Doesnt work when jitted, could be solved but I didn't bother so don't jit this function
 def bertrand_simulation_convergence(alpha, delta, T, prices):
 
