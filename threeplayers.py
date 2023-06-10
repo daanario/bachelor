@@ -217,7 +217,7 @@ def bertrand_simulation(alpha, delta, T, prices):
         curr_prof(p_table, profits, 1, t)
         curr_prof(p_table, profits, 2, t)
         
-        if t % 12500 == 0:
+        if t % 1000 == 0:
             # compute avg. of last 1000 profits for each firm
             profitability0 = np.sum(profits[0, (t-1000):t])/1000 
             profitability1 = np.sum(profits[1, (t-1000):t])/1000
@@ -361,7 +361,7 @@ def bertrand_simulation_forced_deviation(alpha, delta, T, prices):
         curr_prof(p_table, profits, 1, t)
         curr_prof(p_table, profits, 2, t)
         
-        if t % 12500 == 0:
+        if t % 1000 == 0:
             # compute avg. of last 1000 profits for each firm
             profitability0 = np.sum(profits[0, (t-1000):t])/1000 
             profitability1 = np.sum(profits[1, (t-1000):t])/1000
